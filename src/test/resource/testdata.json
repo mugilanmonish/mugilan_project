@@ -1,0 +1,20 @@
+{
+        "browser": "chrome",
+        "url": "https://trello.com/",
+        "username": "mugilanmonish@gmail.com",
+        "password": "Qwertyuiop@123",
+        "boardtitle": "My First Board",
+        "workspacetitle" : "My First Workspace",
+        "workspacewebsite" : "www.myfirstworkspace.com",
+        "workspacedescription" : "Hi Bye",
+        "jiraissuesearch" : "messsages are not working",
+        "helppagetitle" : "Contact Support | Trello" ,
+        "shortcutspagetitle" : "Keyboard shortcuts | Trello",
+        "profilepagetitle" : "Profile | Trello",
+        "cardspagetitle" : "Cards | Trello",
+        "activitypagetitle" : "Activity | Trello",
+        "settingspagetitle" : "Settings | Trello",
+        "pricingpagetitle" : "Which Trello Plan Is Best for You? Our Pricing Guide Can Help | Trello",
+        "appspagetitle" : "Work From Any Device, In Any Browser, Anywhere | Trello",
+        "blogpagetitle" : "Work Life by Atlassian - Unleashing the potential of all teams with tips, tools, and practices"
+}
