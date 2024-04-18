@@ -40,6 +40,7 @@ public class HomePageVerify {
 		driver.findElement(By.xpath("//span[contains(@title,'Mugilan')]")).click();
         driver.findElement(By.xpath("//span[text()='Log out']")).click();
         driver.findElement(By.xpath("//span[text()='Log out']")).submit();
+        // local branch
 	}
 	
 }
