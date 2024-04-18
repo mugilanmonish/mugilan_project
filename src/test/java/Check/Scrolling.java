@@ -23,5 +23,7 @@ public class Scrolling {
 		jse.executeScript("window.scrollBy(0,7000)");
 		Thread.sleep(2000);
 		jse.executeScript("window.scrollTo(0,-7000)");
+		
+		//change
 	}
 }
