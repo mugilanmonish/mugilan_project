@@ -12,6 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.qsp.trello.pomrepo.TrelloBoardsPage;
 import com.qsp.trello.pomrepo.TrelloHomePage;
@@ -25,8 +26,12 @@ public class BaseClass {
 	public FileUtility fileutils = new FileUtility();
 	public JsonUtility jsonUtility = new JsonUtility();
 	
+	
 	@BeforeClass
 	public void preCondition() throws IOException {
+//		String browser = System.getProperty("browser");
+//		String url = System.getProperty("url");
+		String url=fileutils.readtheDataFromPropertyFile("url");
 		String browser = fileutils.readtheDataFromPropertyFile("browser");
 		if(browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -38,7 +43,7 @@ public class BaseClass {
 		
 		driver.manage().window().maximize();
 		webdriverUtils.implicitWait(driver);
-		driver.get(fileutils.readtheDataFromPropertyFile("url"));
+		driver.get(url);
 	}
 	
 	@AfterClass
