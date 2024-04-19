@@ -30,10 +30,10 @@ public class BaseClass {
 	
 	@BeforeClass
 	public void preCondition() throws IOException {
-//		String browser = System.getProperty("browser");
-//		String url = System.getProperty("url");
-		String url=fileutils.readtheDataFromPropertyFile("url");
-		String browser = fileutils.readtheDataFromPropertyFile("browser");
+		String browser = System.getProperty("browser");
+		String url = System.getProperty("url");
+//		String url=fileutils.readtheDataFromPropertyFile("url");
+//		String browser = fileutils.readtheDataFromPropertyFile("browser");
 		if(browser.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equals("firefox")) {
