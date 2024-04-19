@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -44,12 +45,14 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		webdriverUtils.implicitWait(driver);
 		driver.get(url);
+		Reporter.log("Browser Launched");
 	}
 	
 	@AfterClass
 	public void postCondition() {
 		driver.manage().window().minimize();
 		driver.quit();
+		Reporter.log("Browser closed");
 	}
 	
 	@BeforeMethod
@@ -61,6 +64,7 @@ public class BaseClass {
 		loginPage.getContinueButton().submit();
 		loginPage.getPasswordTextField().sendKeys(jsonUtility.readTheDataFromJsonFile("password"));
 		loginPage.getLoginButton().submit();
+		Reporter.log("Login Successfull");
 	}
 	
 	@AfterMethod
@@ -70,5 +74,6 @@ public class BaseClass {
 		trelloBoardsPage.getAccountIcon().click();
 		trelloBoardsPage.getLogoutOption().click();
 		trelloLogoutPage.getLogoutButton().submit();
+		Reporter.log("Logout Successfull");
 	}
 }

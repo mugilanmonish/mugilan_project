@@ -9,5 +9,6 @@ public class HelpPage {
 		System.out.println("Hi");
 		System.out.println("Bye");
 		Reporter.log("Hi---------------------------Bye");
+		
 	}
 }
